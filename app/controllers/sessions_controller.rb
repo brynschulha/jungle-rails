@@ -1,8 +1,9 @@
 class SessionsController < ApplicationController
-  
-  before_filter :authorize
 
   def new
+    puts "*************"
+    puts "is the new action working"
+    puts "*************"
   end
 
   def create
