@@ -1,15 +1,9 @@
 class SessionsController < ApplicationController
 
   def new
-    puts "*************"
-    puts "is the new action working"
-    puts "*************"
   end
 
   def create
-    puts "*************"
-    puts params
-    puts "*************"
     user = User.find_by_email(params[:email])
     # If the user exists, and the password entered is correct
     if user && user.authenticate(params[:password])
