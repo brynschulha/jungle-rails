@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Visitor clicks details page for a product", type: :feature, js: true do
+RSpec.feature "Visitor adds an item to the cart", type: :feature, js: true do
   before :each do
     @category = Category.create! name: 'Apparel'
   
@@ -25,15 +25,16 @@ RSpec.feature "Visitor clicks details page for a product", type: :feature, js: t
     end
   end
 
-  scenario "They see the products details" do
+  scenario "They see the cart increase by 1" do
     # ACT
     visit root_path
-    find("a.btn[href='/products/10']").click
+    # find("a.btn[href='/products/10']").click
+      first('.button_to').click_button("Add")
     
     # DEBUG
     save_screenshot
     
     # VERIFY
-    expect(page).to have_css 'section.products-show'
+    expect(page).to have_link 'My Cart (1)', href: '/cart'
   end
 end
