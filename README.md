@@ -2,6 +2,11 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+# Screenshots
+!["The prodcuts on the home page"](https://github.com/brynschulha/jungle-rails/blob/master/docs/home_page.png?raw=true)
+!["The product details page"](https://github.com/brynschulha/jungle-rails/blob/master/docs/product_details.png?raw=true)
+!["The cart before checkout"](https://github.com/brynschulha/jungle-rails/blob/master/docs/cart.png?raw=true)
+!["The order has been placed"](https://github.com/brynschulha/jungle-rails/blob/master/docs/order_complete.png?raw=true)
 
 ## Setup
 
